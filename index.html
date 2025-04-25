@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonix - Advanced Trigonometric Calculator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>TX</h1>
+    <nav class="menu">
+      <div class="menu-item">Rolance
+        <div class="popup" id="popup1">
+          <p>Programmer</p>
+        </div>
+      </div>
+      <div class="menu-item" id="popup2">Edrie
+        <div class="popup">
+          <p>UI/UX Designer</p>
+        </div>
+      </div>
+      <div class="menu-item" id="popup3">Zean
+        <div class="popup">
+          <p>UI/UX Concept Creator</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="left-panel">
+      <div class="calculator">
+        <h2 class="STC">Smart Trig Calculator</h2>
+        <div class="unit-toggle">
+          <button id="deg-btn" class="active" onclick="setUnit('deg')">Degrees</button>
+          <button id="rad-btn" onclick="setUnit('rad')">Radians</button>
+        </div>
+        
+        <label for="example-select">What are you looking for?</label>
+        <select id="example-select" onchange="updateInputs()">
+          <option value="none">Select Any</option>
+          <option value="sin">sin(θ)</option>
+          <option value="cos">cos(θ)</option>
+          <option value="tan">tan(θ)</option>
+          <option value="csc">csc(θ)</option>
+          <option value="sec">sec(θ)</option>
+          <option value="cot">cot(θ)</option>
+          <option value="side-a">Side a</option>
+          <option value="side-b">Side b</option>
+          <option value="side-c">Side c</option>
+          <option value="angle-a">Angle A</option>
+          <option value="angle-b">Angle B</option>
+          <option value="angle-c">Angle C</option>
+        </select>
+
+        <div id="input-area"></div>
+        
+        <div id="triangle-diagram" class="triangle-diagram" style="display: none;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,80 80,80 50,20" fill="none" stroke="#fff" stroke-width="2"/>
+            <text x="20" y="85" fill="#fff" font-size="8">a</text>
+            <text x="80" y="85" fill="#fff" font-size="8">b</text>
+            <text x="50" y="15" fill="#fff" font-size="8">c</text>
+            <text x="35" y="60" fill="#fff" font-size="8">A</text>
+            <text x="65" y="60" fill="#fff" font-size="8">B</text>
+            <text x="50" y="80" fill="#fff" font-size="8">C</text>
+          </svg>
+        </div>
+
+        <button onclick="calculateTrig()">Calculate</button>
+        <div id="result" style="margin-top: 1rem;"></div>
+        <div id="solution-steps" class="solution-steps" style="display: none;"></div>
+        <button onclick="clearResult()">Clear</button>
+      </div>
+    </div>
+
+    <div class="main-panel">
+      <div>
+        <h2 class="section-title">Trigonometric Functions</h2>
+        <div class="grid">
+          <div class="card" onclick="showFormula('sin')">
+            <div class="card-title">SINE</div>
+            <div class="card-desc">Ratio of opposite side to hypotenuse</div>
+            <div class="card-formula">sin(θ) = opp/hyp</div>
+          </div>
+          <div class="card" onclick="showFormula('cos')">
+            <div class="card-title">COSINE</div>
+            <div class="card-desc">Ratio of adjacent side to hypotenuse</div>
+            <div class="card-formula">cos(θ) = adj/hyp</div>
+          </div>
+          <div class="card" onclick="showFormula('tan')">
+            <div class="card-title">TANGENT</div>
+            <div class="card-desc">Ratio of opposite side to adjacent side</div>
+            <div class="card-formula">tan(θ) = opp/adj</div>
+          </div>
+          <div class="card" onclick="showFormula('csc')">
+            <div class="card-title">COSECANT</div>
+            <div class="card-desc">Reciprocal of sine function</div>
+            <div class="card-formula">csc(θ) = 1/sin(θ)</div>
+          </div>
+          <div class="card" onclick="showFormula('sec')">
+            <div class="card-title">SECANT</div>
+            <div class="card-desc">Reciprocal of cosine function</div>
+            <div class="card-formula">sec(θ) = 1/cos(θ)</div>
+          </div>
+          <div class="card" onclick="showFormula('cot')">
+            <div class="card-title">COTANGENT</div>
+            <div class="card-desc">Reciprocal of tangent function</div>
+            <div class="card-formula">cot(θ) = 1/tan(θ)</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contentContainer">
+        <div id="sinFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('sin')">×</div>
+          <div class="formula-title">SINE FUNCTION</div>
+          <div class="formula-desc">The sine of an angle is the ratio of the length of the opposite side to the length of the hypotenuse.</div>
+          <div class="formula-equation">sin(θ) = opposite / hypotenuse</div>
+        </div>
+        
+        <div id="cosFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('cos')">×</div>
+          <div class="formula-title">COSINE FUNCTION</div>
+          <div class="formula-desc">The cosine of an angle is the ratio of the length of the adjacent side to the length of the hypotenuse.</div>
+          <div class="formula-equation">cos(θ) = adjacent / hypotenuse</div>
+        </div>
+        
+        <div id="tanFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('tan')">×</div>
+          <div class="formula-title">TANGENT FUNCTION</div>
+          <div class="formula-desc">The tangent of an angle is the ratio of the length of the opposite side to the length of the adjacent side.</div>
+          <div class="formula-equation">tan(θ) = opposite / adjacent</div>
+        </div>
+        
+        <div id="cscFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('csc')">×</div>
+          <div class="formula-title">COSECANT FUNCTION</div>
+          <div class="formula-desc">The cosecant is the reciprocal of the sine function, representing the ratio of the hypotenuse to the opposite side.</div>
+          <div class="formula-equation">csc(θ) = 1 / sin(θ) = hypotenuse / opposite</div>
+        </div>
+        
+        <div id="secFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('sec')">×</div>
+          <div class="formula-title">SECANT FUNCTION</div>
+          <div class="formula-desc">The secant is the reciprocal of the cosine function, representing the ratio of the hypotenuse to the adjacent side.</div>
+          <div class="formula-equation">sec(θ) = 1 / cos(θ) = hypotenuse / adjacent</div>
+        </div>
+        
+        <div id="cotFormula" class="trgFncForm">
+          <div class="formula-close" onclick="hideFormula('cot')">×</div>
+          <div class="formula-title">COTANGENT FUNCTION</div>
+          <div class="formula-desc">The cotangent is the reciprocal of the tangent function, representing the ratio of the adjacent side to the opposite side.</div>
+          <div class="formula-equation">cot(θ) = 1 / tan(θ) = adjacent / opposite</div>
+        </div>
+
+        <div id="sinesLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('sines')">×</div>
+          <div class="formula-title">Law of Sines</div>
+          <div class="formula-desc">Relates the lengths of sides of a triangle to the sines of its opposite angles.</div>
+          <div class="formula-equation">a / sin(A) = b / sin(B) = c / sin(C) = 2R</div>
+        </div>
+        
+        <div id="cosinesLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('cosines')">×</div>
+          <div class="formula-title">Law of Cosines</div>
+          <div class="formula-desc">Generalizes the Pythagorean theorem for any triangle.</div>
+          <div class="formula-equation">c² = a² + b² - 2ab·cos(C)</div>
+        </div>
+        
+        <div id="tangentsLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('tangents')">×</div>
+          <div class="formula-title">Law of Tangents</div>
+          <div class="formula-desc">Relates the tangent of two angles to the lengths of the opposite sides.</div>
+          <div class="formula-equation">(a - b)/(a + b) = tan[(A - B)/2]/tan[(A + B)/2]</div>
+        </div>
+        
+        <div id="cotangentsLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('cotangents')">×</div>
+          <div class="formula-title">Law of Cotangents</div>
+          <div class="formula-desc">Relates the cotangent of half an angle to the triangle sides and radius.</div>
+          <div class="formula-equation">cot(A/2) = (s - a)/r</div>
+        </div>
+        
+        <div id="pythagoreanLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('pythagorean')">×</div>
+          <div class="formula-title">Pythagorean Theorem</div>
+          <div class="formula-desc">For right triangles, the square of the hypotenuse equals the sum of squares of the other two sides.</div>
+          <div class="formula-equation">a² + b² = c²</div>
+        </div>
+        
+        <div id="heronLaw" class="trgFncForm">
+          <div class="formula-close" onclick="hideLaw('heron')">×</div>
+          <div class="formula-title">Heron's Formula</div>
+          <div class="formula-desc">Calculates the area of a triangle when the lengths of all three sides are known.</div>
+          <div class="formula-equation">Area = √[s(s - a)(s - b)(s - c)] where s = (a + b + c)/2</div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">Laws, Theorems, and Identities</h2>
+        <div class="grid">
+          <div class="card" onclick="showLaw('sines')">
+            <div class="card-title">Law of Sines</div>
+            <div class="card-desc">Relates sides and angles of any triangle</div>
+            <div class="card-formula">a/sin(A) = b/sin(B) = c/sin(C)</div>
+          </div>
+          <div class="card" onclick="showLaw('cosines')">
+            <div class="card-title">Law of Cosines</div>
+            <div class="card-desc">Generalization of Pythagorean theorem</div>
+            <div class="card-formula">c² = a² + b² - 2ab·cos(C)</div>
+          </div>
+          <div class="card" onclick="showLaw('tangents')">
+            <div class="card-title">Law of Tangents</div>
+            <div class="card-desc">Relates tangents of two angles</div>
+            <div class="card-formula">(a-b)/(a+b) = tan[(A-B)/2]/tan[(A+B)/2]</div>
+          </div>
+          <div class="card" onclick="showLaw('cotangents')">
+            <div class="card-title">Law of Cotangents</div>
+            <div class="card-desc">Relates cotangents to triangle sides</div>
+            <div class="card-formula">cot(A/2) = (s-a)/r</div>
+          </div>
+          <div class="card" onclick="showLaw('pythagorean')">
+            <div class="card-title">Pythagorean Theorem</div>
+            <div class="card-desc">For right triangles only</div>
+            <div class="card-formula">a² + b² = c²</div>
+          </div>
+          <div class="card" onclick="showLaw('heron')">
+            <div class="card-title">Heron's Formula</div>
+            <div class="card-desc">Area from side lengths</div>
+            <div class="card-formula">Area = √[s(s-a)(s-b)(s-c)]</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">Trigonometric Terms</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-title">Hypotenuse</div>
+            <div class="card-desc">The longest side of a right triangle, opposite the right angle</div>
+            <div class="card-formula">c = √(a² + b²)</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Opposite Side</div>
+            <div class="card-desc">The side directly across from the angle of interest</div>
+            <div class="card-formula">opp = hyp × sin(θ)</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Adjacent Side</div>
+            <div class="card-desc">The side next to the angle (not the hypotenuse)</div>
+            <div class="card-formula">adj = hyp × cos(θ)</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Radians</div>
+            <div class="card-desc">Angle measurement based on arc length (π rad = 180°)</div>
+            <div class="card-formula">1 rad ≈ 57.2958°</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Unit Circle</div>
+            <div class="card-desc">Circle with radius 1 used to define trig functions</div>
+            <div class="card-formula">x² + y² = 1</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Reference Angle</div>
+            <div class="card-desc">Acute angle between terminal side and x-axis</div>
+            <div class="card-formula">Always between 0 and π/2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
