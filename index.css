@@ -261,6 +261,24 @@ body {
     text-align: center;
   }
 
+  @media (min-width: 100px) {
+    .trgFncForm {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 280px;
+      height: 250px;
+      background-color: #1d1d1d;
+      border-radius: 10px;
+      border: 1px solid #cccccc1c;
+      padding: 2rem;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
   .formula-title {
     font-size: 1.5rem;
     font-weight: bold;
