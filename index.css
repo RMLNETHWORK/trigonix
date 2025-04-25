@@ -73,6 +73,16 @@ body {
     border: 1px solid #444;
   }
 
+  @media (min-width: 100px) {
+    .left-panel {
+      flex: 1.1;
+      margin-right: 1.5rem;
+      background-color: #2d2d2d;
+      border-radius: 10px;
+      border: 1px solid #444;
+    }
+  }
+
   .main-panel {
     flex: 3;
     margin-top: -10px;
@@ -278,6 +288,22 @@ body {
     }
   }
 
+  @media (min-width: 700px) {
+    .trgFncForm {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 450px;
+      height: 250px;
+      background-color: #1d1d1d;
+      border-radius: 10px;
+      border: 1px solid #cccccc1c;
+      padding: 2rem;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 
   .formula-title {
     font-size: 1.5rem;
