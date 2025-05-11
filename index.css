@@ -371,3 +371,7 @@ select {
   margin: 0px;
   padding: 0px;
 }
+
+a {
+  color: #cccccc;
+}
