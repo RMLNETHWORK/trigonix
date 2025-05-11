@@ -1,6 +1,6 @@
 .home {
-    position: fixed;
-    top: 550px;
+    position: relative;
+    top: 100px;
     font-size: 25px;
     font-weight: 600;
     text-decoration: underline;
