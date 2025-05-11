@@ -1,5 +1,5 @@
 .home {
-    position: fixed;
+    position: absolute;
     bottom: 100px;
     font-size: 25px;
     font-weight: 600;
