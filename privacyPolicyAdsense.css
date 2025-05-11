@@ -9,11 +9,7 @@ body {
 
 .holder {
     display: flex;
-    justify-content: center;
+    flex: 1;
     width: 100vw;
     height: 100vh;
-}
-
-h1 {
-    margin-left: 30px;
 }
