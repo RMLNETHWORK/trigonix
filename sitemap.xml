@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://trigonix.netlify.app/</loc>
-    <lastmod>2025-05-12</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://trigonix.netlify.app/about</loc>
-    <lastmod>2025-05-12</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://trigonix.netlify.app/calculator</loc>
-    <lastmod>2025-05-12</lastmod>
-    <priority>0.90</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://trigonix.netlify.app/</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/termsandprivacypolicy</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogpage</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog1</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog2</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog3</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog4</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog5</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog6</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog7</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog8</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog9</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog10</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog11</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog12</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog13</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog14</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog15</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog16</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog17</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog18</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog19</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://trigonix.netlify.app/blogs/blog20</loc>
+  <lastmod>2025-05-12T12:09:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
