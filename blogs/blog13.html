@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Graphics Trigonometry | Trigonix Blog</title>
+  <link rel="stylesheet" href="blogPage.css">
+</head>
+<body>
+  <h1>🎮 Trigonometry in Computer Graphics</h1>
+  
+  <div class="blog-post">
+    <p>Every frame of modern 3D animation involves thousands of trigonometric calculations for lighting, perspective, and motion.</p>
+    
+    <h3>Core Techniques</h3>
+    <ul>
+      <li><strong>3D Rotation:</strong>
+        <div class="formula">
+          x' = x·cosθ - y·sinθ
+          <br>y' = x·sinθ + y·cosθ
+        </div>
+      </li>
+      <li><strong>Perspective Projection:</strong>
+        <div class="formula">
+          scale = d/(d + z)
+        </div>
+      </li>
+      <li><strong>Ray Tracing:</strong> Calculating light ray angles</li>
+    </ul>
+    
+    <div class="example-box">
+      <h4>Character Animation</h4>
+      <p>Calculating knee bend for walking cycle:
+        <br>θ(t) = 35° + 25°sin(2πt/1.2)
+        <br>Where t is seconds in animation
+      </p>
+    </div>
+    
+    <h3>GPU Optimization</h3>
+    <p>Modern graphics cards implement:</p>
+    <ul>
+      <li>Taylor series approximations for sin/cos</li>
+      <li>Lookup tables for common angles</li>
+      <li>Parallel computation of vertex transforms</li>
+    </ul>
+  </div>
+  
+  <a class="back-home" href="/blogPage.html">← Back to Blogs</a>
+  <a class="back-home" href="/index.html">← Back to Home</a>
+</body>
+</html>

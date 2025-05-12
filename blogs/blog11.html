@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robotics Trigonometry | Trigonix Blog</title>
+  <link rel="stylesheet" href="blogPage.css">
+</head>
+<body>
+  <h1>🤖 Trigonometry in Robotics</h1>
+  
+  <div class="blog-post">
+    <p>Robotic systems depend on trigonometric calculations for precise movement, positioning, and environmental interaction.</p>
+    
+    <h3>Inverse Kinematics</h3>
+    <p>Calculating joint angles to reach target positions:</p>
+    <div class="formula">
+      θ₂ = arccos[(x² + y² - L₁² - L₂²)/(2L₁L₂)]
+      <br>θ₁ = arctan(y/x) - arctan[(L₂sinθ₂)/(L₁ + L₂cosθ₂)]
+    </div>
+    
+    <h3>Applications</h3>
+    <ul>
+      <li><strong>Industrial Arms:</strong> Assembly line welding/painting</li>
+      <li><strong>Prosthetics:</strong> Natural movement simulation</li>
+      <li><strong>Autonomous Vehicles:</strong> Path planning algorithms</li>
+    </ul>
+    
+    <div class="example-box">
+      <h4>SCARA Robot Example</h4>
+      <p>2-link arm (L₁=0.5m, L₂=0.3m) reaching for (0.6,0.4):
+        <br>1. Calculate θ₂ using Law of Cosines
+        <br>2. Determine θ₁ using tangent relationships
+        <br>3. Verify solution reaches target
+      </p>
+    </div>
+    
+    <h3>Sensor Systems</h3>
+    <ul>
+      <li>LIDAR angular resolution</li>
+      <li>Stereo vision depth perception</li>
+      <li>Gyroscopic stabilization</li>
+    </ul>
+  </div>
+  
+  <a class="back-home" href="/blogPage.html">← Back to Blogs</a>
+  <a class="back-home" href="/index.html">← Back to Home</a>
+</body>
+</html>

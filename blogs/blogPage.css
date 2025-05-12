@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    color: #ccc;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.back-home:hover {
+    transition: ease-in-out;
+    transition-duration: .1s;
+    background-color: #444;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background-color: #333;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.example-box {
+    background-color: #1f1f7f1c;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.formula {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1f1f1fee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.note {
+    background-color: #3f3f1fff;
+    border-left: 4px solid #ffd600;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .blog-post {
+        padding: 15px;
+    }
+}

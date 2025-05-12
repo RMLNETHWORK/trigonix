@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Law of Sines vs Cosines | Trigonix Blog</title>
+  <link rel="stylesheet" href="blogPage.css">
+</head>
+<body>
+  <h1>🛠 When to Use the Law of Sines vs Cosines</h1>
+  
+  <div class="blog-post">
+    <p>Choosing between the Law of Sines and Law of Cosines is crucial for solving oblique triangles efficiently. This guide provides clear decision-making principles with practical examples.</p>
+    
+    <h3>Law of Sines</h3>
+    <div class="formula">
+      a/sinA = b/sinB = c/sinC
+    </div>
+    <p><strong>When to use:</strong></p>
+    <ul>
+      <li>When you know two angles and any side (AAS or ASA)</li>
+      <li>When you know two sides and a non-included angle (SSA)</li>
+    </ul>
+    
+    <h3>Law of Cosines</h3>
+    <div class="formula">
+      c² = a² + b² - 2ab·cosC
+    </div>
+    <p><strong>When to use:</strong></p>
+    <ul>
+      <li>When you know all three sides (SSS)</li>
+      <li>When you know two sides and the included angle (SAS)</li>
+    </ul>
+    
+    <div class="example-box">
+      <h4>Practical Example</h4>
+      <p><strong>Scenario:</strong> Triangle with sides a=7, b=10, and angle C=40°</p>
+      <p><strong>Solution:</strong> This is SAS case → Use Law of Cosines first:</p>
+      <p>c² = 7² + 10² - 2(7)(10)cos40° ≈ 49 + 100 - 107.28 ≈ 41.72</p>
+      <p>c ≈ √41.72 ≈ 6.46</p>
+      <p>Now use Law of Sines to find other angles</p>
+    </div>
+    
+    <h3>Decision Flowchart</h3>
+    <ol>
+      <li>Count known elements (angles/sides)</li>
+      <li>Identify known combination (AAS, ASA, SSA, SAS, SSS)</li>
+      <li>Apply appropriate law based on combination</li>
+      <li>Use the other law to find remaining elements if needed</li>
+    </ol>
+    
+    <div class="note">
+      <p><strong>Pro Tip:</strong> The Law of Cosines is generally more computationally intensive but works in all cases. When possible, use the Law of Sines first for simpler calculations.</p>
+    </div>
+    
+    <h3>Common Mistakes</h3>
+    <ul>
+      <li>Using Law of Sines for SSS cases</li>
+      <li>Applying Law of Cosines to right triangles unnecessarily</li>
+      <li>Forgetting to consider the ambiguous case (SSA) with Law of Sines</li>
+    </ul>
+    
+    <p>Mastering these laws enables you to solve any oblique triangle, essential for navigation, surveying, and physics applications.</p>
+  </div>
+  
+  <a class="back-home" href="/blogPage.html">← Back to Blogs</a>
+  <a class="back-home" href="/index.html">← Back to Home</a>
+</body>
+</html>
