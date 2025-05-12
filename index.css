@@ -366,6 +366,7 @@ select {
   background-color: #333;
   border: 1px solid #cccccc1c;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0px;
