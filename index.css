@@ -358,21 +358,3 @@ select {
   top: -25px;
   margin-bottom: -20px;
 }
-
-.footer {
-  margin: 10px;
-  width: 98.7vw;
-  height: 100px;
-  background-color: #333;
-  border: 1px solid #cccccc1c;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-}
-
-a {
-  color: #cccccc;
-}
