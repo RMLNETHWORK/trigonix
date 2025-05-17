@@ -16,3 +16,20 @@ a {
     margin: 5px;
     color: #cccccc;
 }
+
+.back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a9ff5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back:hover {
+    background-color: #3a8ee5;
+}
