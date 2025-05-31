@@ -1,20 +1,9 @@
 (function() {
-  // Preload for faster discovery (optional but recommended)
-  const preloadLink = document.createElement('link');
-  preloadLink.rel = 'preload';
-  preloadLink.href = 'favicon.webp';
-  preloadLink.as = 'image';
-  document.head.appendChild(preloadLink);
-
-  // Favicon link
+  // Favicon link only (no preload)
   const faviconLink = document.createElement('link');
   faviconLink.rel = 'icon';
-  faviconLink.type = 'image/webp'; // More accurate for WebP
+  faviconLink.type = 'image/webp';
   faviconLink.href = 'favicon.webp';
-  
-  // Size specifications (recommended to prevent layout shifts)
-  faviconLink.sizes = '32x32'; // Standard size
-  
-  // Append to head
+  faviconLink.sizes = '32x32';
   document.head.appendChild(faviconLink);
 })();
